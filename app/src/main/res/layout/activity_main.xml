@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background_shape"
+    android:orientation="vertical"
+    android:paddingTop="56dp">
+
+    <LinearLayout
+        android:id="@+id/input_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/input_layout_padding"
+        android:layout_marginRight="@dimen/input_layout_padding"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_1_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/input_2_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="@dimen/input_edt_round_width"
+            android:layout_height="@dimen/input_edt_round_height"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/input_edt_round_padding"
+            android:background="@drawable/round_whirt_shape" />
+
+        <EditText
+            android:id="@+id/input_3_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/input_4_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/input_5_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/input_6_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/input_7_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/input_edt_padding"
+            android:layout_weight="1"
+            android:background="#333843"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="#e0ffffff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

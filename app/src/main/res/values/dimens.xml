@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="input_layout_padding">16dp</dimen>
+    <dimen name="input_edt_padding">1.5dp</dimen>
+    <dimen name="input_edt_round_width">6dp</dimen>
+    <dimen name="input_edt_round_height">6dp</dimen>
+    <dimen name="input_edt_round_padding">4dp</dimen>
+</resources>
