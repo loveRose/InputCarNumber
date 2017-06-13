@@ -25,6 +25,7 @@
             android:lines="1"
             android:maxLength="1"
             android:maxLines="1"
+            android:imeOptions="actionNext"
             android:textColor="#e0ffffff"
             android:textSize="18sp" />
 
@@ -35,6 +36,7 @@
             android:layout_margin="@dimen/input_edt_padding"
             android:layout_weight="1"
             android:background="#333843"
+            android:imeOptions="actionNext"
             android:gravity="center"
             android:lines="1"
             android:maxLength="1"
@@ -51,6 +53,7 @@
 
         <EditText
             android:id="@+id/input_3_edt"
+            android:imeOptions="actionNext"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/input_edt_padding"
@@ -71,6 +74,7 @@
             android:layout_weight="1"
             android:background="#333843"
             android:gravity="center"
+            android:imeOptions="actionNext"
             android:lines="1"
             android:maxLength="1"
             android:maxLines="1"
@@ -83,6 +87,7 @@
             android:layout_height="match_parent"
             android:layout_margin="@dimen/input_edt_padding"
             android:layout_weight="1"
+            android:imeOptions="actionNext"
             android:background="#333843"
             android:gravity="center"
             android:lines="1"
@@ -96,6 +101,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/input_edt_padding"
+            android:imeOptions="actionNext"
             android:layout_weight="1"
             android:background="#333843"
             android:gravity="center"
@@ -110,6 +116,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/input_edt_padding"
+            android:imeOptions="actionNext"
             android:layout_weight="1"
             android:background="#333843"
             android:gravity="center"

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setEdtListener() {
         for (int i = 0; i < editTexts.size(); i++) {
-            editTexts.get(i).setTag(i);
+            editTexts.get(i).setTag(false);
             final int position = i;
             editTexts.get(i).addTextChangedListener(new TextWatcher() {
 
@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     //输入了一个之后自动对其进行跳转
                     if (!TextUtils.isEmpty(s.toString())) {
                         //变化不为空时才进行自动操作
+
+                        //设置当前输入框中有内容
+                        editTexts.get(position).setTag(true);
                         if (position < 6) {
                             //失去焦点
                             EditText currentEdt = editTexts.get(position);
@@ -70,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (hasFocus) {
                         //获得焦点了，让其光标在最后
-                        int position = (int) v.getTag();
                         if (!TextUtils.isEmpty(editTexts.get(position).getText().toString())) {
                             editTexts.get(position).setSelection(1);
                         }
@@ -80,17 +82,23 @@ public class MainActivity extends AppCompatActivity {
             editTexts.get(i).setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
-                    if (keyCode == KeyEvent.KEYCODE_DEL
-                            && event.getAction() == KeyEvent.ACTION_DOWN) {
-                        //事件
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        boolean isEmpty = (boolean) editTexts.get(position).getTag();
+                        //删除事件
                         if (TextUtils.isEmpty(editTexts.get(position).getText().toString()) && position > 0) {
-                            EditText previousEdt = editTexts.get(position - 1);
-                            previousEdt.setFocusable(true);
-                            previousEdt.setFocusableInTouchMode(true);
-                            previousEdt.requestFocus();
-                            previousEdt.findFocus();
+                            if (isEmpty) {
+                                //第一次为空了  但是本次仍然停留在该输入框中
+                                editTexts.get(position).setTag(false);
+                            } else {
+                                EditText previousEdt = editTexts.get(position - 1);
+                                previousEdt.setText("");
+                                previousEdt.setFocusable(true);
+                                previousEdt.setFocusableInTouchMode(true);
+                                previousEdt.requestFocus();
+                                previousEdt.findFocus();
+                                return true;
+                            }
                         }
-                        return false;
                     }
                     return false;
                 }
