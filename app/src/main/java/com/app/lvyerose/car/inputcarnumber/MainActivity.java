@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -74,6 +75,24 @@ public class MainActivity extends AppCompatActivity {
                             editTexts.get(position).setSelection(1);
                         }
                     }
+                }
+            });
+            editTexts.get(i).setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (keyCode == KeyEvent.KEYCODE_DEL
+                            && event.getAction() == KeyEvent.ACTION_DOWN) {
+                        //事件
+                        if (TextUtils.isEmpty(editTexts.get(position).getText().toString()) && position > 0) {
+                            EditText previousEdt = editTexts.get(position - 1);
+                            previousEdt.setFocusable(true);
+                            previousEdt.setFocusableInTouchMode(true);
+                            previousEdt.requestFocus();
+                            previousEdt.findFocus();
+                        }
+                        return false;
+                    }
+                    return false;
                 }
             });
 
