@@ -53,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
                             editTexts.get(position).setText(s.toString().substring(1));
                             editTexts.get(position).setSelection(1);
                         }
+
+                        //限制输入的是字母 则转换成大写
+                        char code = editTexts.get(position).getText().toString().charAt(0);
+                        if (code >= 97 && code <= 122) {
+                            code -= 32;
+                            editTexts.get(position).setText(code + "");
+                            editTexts.get(position).setSelection(1);
+                        }
+
                         //设置当前输入框中有内容
                         editTexts.get(position).setTag(true);
 
