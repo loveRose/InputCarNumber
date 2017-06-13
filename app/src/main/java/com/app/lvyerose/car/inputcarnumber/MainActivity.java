@@ -49,9 +49,13 @@ public class MainActivity extends AppCompatActivity {
                     //输入了一个之后自动对其进行跳转
                     if (!TextUtils.isEmpty(s.toString())) {
                         //变化不为空时才进行自动操作
-
+                        if (s.toString().length() == 2) {
+                            editTexts.get(position).setText(s.toString().substring(1));
+                            editTexts.get(position).setSelection(1);
+                        }
                         //设置当前输入框中有内容
                         editTexts.get(position).setTag(true);
+
                         if (position < 6) {
                             //失去焦点
                             EditText currentEdt = editTexts.get(position);
