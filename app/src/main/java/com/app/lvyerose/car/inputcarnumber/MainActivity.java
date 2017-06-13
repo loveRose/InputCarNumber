@@ -3,6 +3,7 @@ package com.app.lvyerose.car.inputcarnumber;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setEdtListener() {
         for (int i = 0; i < editTexts.size(); i++) {
+            if (i==0){
+                //设置第一个只能输入汉字的过滤器
+                editTexts.get(i).setFilters(new InputFilter[]{InputUtils.getInputChineseFilter()});
+            }
             editTexts.get(i).setTag(false);
             final int position = i;
             editTexts.get(i).addTextChangedListener(new TextWatcher() {
@@ -147,4 +152,5 @@ public class MainActivity extends AppCompatActivity {
         editTexts.add((EditText) findViewById(R.id.input_6_edt));
         editTexts.add((EditText) findViewById(R.id.input_7_edt));
     }
+
 }
