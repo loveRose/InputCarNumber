@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setEdtListener() {
         for (int i = 0; i < editTexts.size(); i++) {
-            if (i==0){
+            if (i == 0) {
                 //设置第一个只能输入汉字的过滤器
                 editTexts.get(i).setFilters(new InputFilter[]{InputUtils.getInputChineseFilter()});
             }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     //输入了一个之后自动对其进行跳转
                     if (!TextUtils.isEmpty(s.toString())) {
                         //变化不为空时才进行自动操作
-                        if (s.toString().length() == 2) {
+                        if (s.toString().length() >= 2) {
                             editTexts.get(position).setText(s.toString().substring(1));
                             editTexts.get(position).setSelection(1);
                         }
